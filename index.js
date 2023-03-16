@@ -23,8 +23,8 @@ startQuiz.addEventListener("click", () => {
 
   let x = setInterval(() => {
     if (counterNum < 0) {
-      coutDown.classList.remove("flex");
-      coutDown.classList.add("hidden");
+      countDown.classList.remove("flex");
+      countDown.classList.add("hidden");
       counterNum = 3;
       count = 0;
       timer = null;
@@ -73,8 +73,9 @@ const displayQuiz = (data) => {
   });
 };
 
+
 // EventListener for quiz submit button
-document.querySelector("#submit").addEventlistener("click", () => {
+document.querySelector("#submit").addEventListener("click", ()=>{
   if (answers.length < 6) {
     return;
   }
@@ -82,7 +83,7 @@ document.querySelector("#submit").addEventlistener("click", () => {
   answersContainer.innerHTML = `<div class="my-4">
   <i class="fa-solid fa-fan animate-spin text-2xl text-green-600"></i>
   <p class="text-xs animate-pulse">Please Wait, We are checking...</p>
-</div>`;
+  </div>`;
   let timeTaken = document.querySelector("#count");
   let totalMark = 0;
   let grade = {
