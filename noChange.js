@@ -61,6 +61,7 @@ const chooseQuiz = (index, givenAns) => {
     answers.push({ ...quizData[index], givenAns });
   }
   displayAnswers(answers);
+  console.log(answers)
 };
 
 const displayAnswers = (data) => {
